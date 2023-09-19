@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalFood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2fb0a02a4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="fullpage">
+        <nav class="navbar">
+            <a class="navbar-logo" href="#Home">Ylocalfood</a>
+            <div class="toggle-button" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="navbar-links">
+              <a class="navbar-link" href="#Home" onclick="closeNavbar(),toggleActive(this)">Home</a>
+              <a class="navbar-link" href="#Menu" onclick="closeNavbar(),toggleActive(this)">Menu</a>
+              <a class="navbar-link" href="#About" onclick="closeNavbar(),toggleActive(this)">About Us</a>
+              <a class="navbar-link" href="#Contact" onclick="closeNavbar(),toggleActive(this)">Contact</a>
+          </div>
+        </nav>
+        <script>
+          let isNavbarOpen = false;
+    
+          function toggleNavbar() {
+              const navbarLinks = document.querySelector('.navbar-links');
+              if (!isNavbarOpen) {
+                  navbarLinks.classList.add('active');
+              } else {
+                  navbarLinks.classList.remove('active');
+              }
+              isNavbarOpen = !isNavbarOpen;
+          }
+    
+          function closeNavbar() {
+                const navbarLinks = document.querySelector('.navbar-links');
+                navbarLinks.classList.remove('active');
+                isNavbarOpen = false;}
+    
+          function toggleActive(clickedLink) {
+            const links = document.querySelectorAll(".navbar-link");
+             links.forEach(function (link) {
+                link.classList.remove('active-link');
+                });
+                clickedLink.classList.add('active-link');
+            }       
+      </script>
+
+
+            <section class="HomeContainer" style="background-image: url('./assets/baked-potatoes-with-garlic-herbs-fried-chanterelles-cast-iron-skillet-top-view.jpg') ;" id="Home">
+                <div class="leftSide">
+                  <div class="homeText">
+                    <h1>Local Restaurant</h1>
+                    <p>Get your local Dishes Here</p>
+                  </div>
+                    <a href="#Menu"><button class="btn">Order Now</button></a>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="Menu" id="Menu">
+                <div class="MenuContainer">
+                  <div class="MenuTitle">
+                    <h2>MENU</h2>
+                  </div>
+                  <p >GET YOUR LOCAL DISHES</p>
+                </div>
+                <div class="p">
+                  <div class="MenuListContainer">
+                  <div class="MenuList">
+                    <div class="project">
+                      <img src="./assets/276dadfa31ae46c3a612642dc2b7dbac.jpg" alt="">
+                      <h2>Maakouda</h2>
+                      <p>GH70</p>
+                    </div>
+                    <div class="project">
+                      <img src="./assets/3fe7204e6c564d84b8a94c78a13572af.jpg" alt="">
+                      <h2>Cachupa</h2>
+                      <p>GH57</p>
+                    </div>
+                    <div class="project">
+                      <img src="./assets/41ca6dfc48714647a813a6c1333a9e94.jpg" alt="">
+                      <h2>Jollof rice</h2>
+                      <p>GH80</p>
+                    </div>
+                    <div class="project">
+                      <img src="./assets/ed5985a77fbd4566bab7e6963f8ab391.jpg" alt="">
+                      <h2>Loubia</h2>
+                      <p>GH76</p>
+                    </div>
+                  </div>
+                </div></div>
+                
+              </section>
+
+
+
+              <section class="About" id="About">
+                <div class="AboutContainer">
+                  <div class="AboutTitle">
+                    <h2>ABOUT US</h2>
+                  </div>
+                </div>
+                <div class="AboutText">
+                    <div class="lrpic"><img src='./assets/pexels-arthur-brognoli-2260824.jpg' /></div>
+                    <div class="lrtext"><p>
+                        YLocalFood is your local dining destination, where flavor meets community. Our menu features a variety of dishes inspired by the vibrant tastes of the area, all prepared with fresh, locally sourced ingredients. Whether you're dropping in for a quick bite or gathering with friends and family, our cozy ambiance and friendly service will make you feel like a part of the neighborhood. Join us at Local Eats Cafe, and experience the true essence of local flavors in every delicious bite.
+                    </p></div>
+                  </div>
+                </section>
+              </section>
+
+
+              <section class="Contact" id="Contact">
+                <div class="ContactContainer">
+                  <div class="ContactTitle">
+                    <h2>CONTACT US</h2>
+                  </div>
+                </div>
+                <div class="lrinfo">
+                  <form id="contact-form">
+                    <input
+                      placeholder="Name"
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                    />
+          
+                    <input
+                      placeholder="E-mail"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                    />
+          
+                    <textarea
+                      placeholder="Text......"
+                      id="message"
+                      name="message"
+                      rows="9"
+                      required
+                    ></textarea>
+          
+                    <button class="submit" type="submit">
+                      Send
+                    </button>
+                  </form>
+                  <div class="othercontact">
+                    <h1>Other Contact</h1>
+                    <div><i class="fa-brands fa-whatsapp" style="font-size: 40px;"></i> <h2>0241597506</h2></div>
+                    <div><i class="fa-brands fa-instagram" style="font-size: 40px;"></i> <h2>Local_Rest</h2> </div>
+                  </div>
+                </div>
+              </section>
+
+
+
+
+              <div class="Footer">
+                <div class="FooterIconLink">
+                  <a href="" class="FooterIconLink">
+                    <i class="fa-brands fa-github" style="color: rgb(72, 72, 90);font-size: 38px;"></i>
+                  </a>
+                  <a href="" class="IconLink">
+                    <i class="fa-brands fa-linkedin" style="color: rgb(72, 72, 90);font-size: 38px;"></i>
+                  </a>
+                  <a href="" class="IconLink">
+                    <i class="fa-solid fa-envelope" style="color: rgb(72, 72, 90);font-size: 38px;"></i>
+                  </a>
+                  <a href="" class="IconLink">
+                    <i class="fa-brands fa-twitter" style="color: rgb(72, 72, 90); font-size: 38px;"></i>
+                  </a>
+                </div>
+          
+                <div class="footerText">
+                  <p>
+                    <i class="fa-regular fa-copyright"></i> 2023 Yamoah.com
+                  </p>
+                </div>
+    </div>
+    
+
+    <script src="Script.js"></script>
+</body>
+</html>
