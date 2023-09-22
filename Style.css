@@ -151,6 +151,7 @@ body{
   @media (max-width: 767px) {
     .leftSide{
         padding-left:20px;
+        margin:auto auto;
     }
     .homeText{
         text-align: center;
