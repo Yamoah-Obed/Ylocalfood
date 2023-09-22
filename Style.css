@@ -154,7 +154,7 @@ body{
         margin:auto auto;
     }
     .homeText{
-        text-align: center;
+        padding-left:20px;
         color: #ffffff;
         font-size:40px;
     }
